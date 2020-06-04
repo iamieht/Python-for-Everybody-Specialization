@@ -11,18 +11,19 @@ while True:
     if num == "done":
         break
     try:
-        number = int(num)
-        if largest is None:
-            largest = number
-        elif number > largest:
-            largest = number
-        elif smallest is None:
-            smallest = number
-        elif number < smallest:
-            smallest = number
+        number = int(num)   
     except:
         print("Invalid input")
         continue
+
+    if largest is None:
+            largest = number
+    elif number > largest:
+            largest = number
+    elif smallest is None:
+            smallest = number
+    elif number < smallest:
+            smallest = number
 
 print("Maximum is", largest)
 print("Minimum is", smallest)
